@@ -5,8 +5,8 @@ This repository hosts the manuscript source for a semi-classical, conceptually e
 ## 📁 Repository Architecture
 
 ```text
-├── main.tex      # Flagship two-part LaTeX manuscript source formatted for PRL
-├── main.pdf      # Compiled preprint letter manuscript
+├── main.tex      # LaTeX manuscript source 
+├── main.pdf      # Compiled manuscript
 └── LICENSE       # MIT Open-Source License
 ```
 
