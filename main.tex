@@ -16,37 +16,32 @@
 \email{mrpaulwjarvis@gmail.com}
 \affiliation{Independent Researcher, United Kingdom}
 
-\date{\today}
+\date{July 13, 2026}
 
 \begin{abstract}
-We present a minimal, holographic resolution of the black hole singularity. Infalling matter undergoes progressive structural deconstruction during collapse, with its effective three-dimensional degrees of freedom gradually projected onto a two-dimensional holographic surface. Collapse terminates when the information content saturates the holographic bound ($I = I_{\max}$). At this threshold, no further stable compression is possible, and the saturated configuration undergoes a topological rupture that initiates a new expanding spacetime region. A modified Friedmann equation incorporating the saturation effect yields a smooth bounce without invoking exotic matter or higher-order curvature terms. The model is fully consistent with the holographic principle, black hole thermodynamics, and thermodynamic derivations of gravity. It requires no new fundamental fields and offers a conceptually economical alternative to existing singularity-resolution frameworks. Potential implications for black hole interiors, cosmological bounces, and the information paradox are discussed.
+We propose a minimal model in which the black hole singularity is replaced by an information-saturation threshold. As collapsing matter is compressed, its internal structure is progressively broken down into more elementary degrees of freedom, whose number is bounded above by the holographic limit $I_{\max} = A/4\ell_p^2$. Collapse terminates when this bound is saturated ($I=I_{\max}$); no further stable compression is possible, and the configuration undergoes a rupture that initiates a new expanding spacetime region. A modified Friedmann equation incorporating the saturation effect admits an exact bounce solution under radiation domination, requiring no exotic matter or higher-order curvature terms. We compute the resulting tensor-mode spectrum and find exponentially suppressed particle production, distinct from mechanisms driven by a finite-width confinement feature. The model requires no new fundamental fields and is presented as a conceptual and phenomenological proposal rather than a completed derivation.
 \end{abstract}
 
 \maketitle
 \setstretch{1.15}
 
 \section{Introduction}
-General relativity predicts the formation of singularities under realistic gravitational collapse \cite{Penrose1965, Hawking1970}. These singularities represent a fundamental breakdown of the theory, where curvature and density become infinite and predictability is lost. While the cosmic censorship conjecture suggests singularities are hidden behind event horizons, their existence inside black holes remains a deep theoretical problem.
+General relativity predicts the formation of singularities under realistic gravitational collapse \cite{Penrose1965, Hawking1970}: curvature and density diverge, and predictability is lost. Cosmic censorship hides these singularities behind horizons, but their existence inside black holes remains unresolved.
 
-Significant progress toward singularity resolution has been made in loop quantum gravity \cite{Ashtekar2006}, string theory, and approaches based on the holographic principle \cite{Hooft1993, Susskind1995}. In particular, the holographic principle asserts that the maximum information content in a spatial volume is bounded by the area of its boundary, offering a natural ultraviolet cutoff for gravitational degrees of freedom.
+Loop quantum gravity \cite{Ashtekar2006}, string theory, and holographic approaches \cite{Hooft1993, Susskind1995} have each made progress toward singularity resolution. The holographic principle in particular bounds the maximum information content of a spatial region by the area of its boundary, giving a natural ultraviolet cutoff on gravitational degrees of freedom.
 
-In this paper, we propose a minimal model in which the classical singularity is replaced by an information saturation threshold. Matter does not collapse to infinite density. Instead, as the radius decreases, the system undergoes progressive deconstruction of its internal structure---including effective dimensional reduction---until its information content fully saturates the holographic bound. At this point, further inward collapse is forbidden, triggering a topological rupture and subsequent expansion.
+We propose that the classical singularity is replaced by an information-saturation threshold. As the collapse radius decreases, matter is broken down into progressively more elementary degrees of freedom, without our needing to specify what those degrees of freedom ultimately are. Collapse halts when their number saturates the holographic bound, triggering a rupture and subsequent expansion.
 
-\section{Information Content and the Holographic Saturation Mechanism}
-A key ingredient of the model is the information content $I(r)$ of the collapsing matter. We define $I(r)$ as the effective number of independent microscopic degrees of freedom compatible with the macroscopic configuration at radius $r$. This notion is consistent with coarse-grained entropy, entanglement entropy across local horizons, and the Bekenstein--Hawking entropy associated with holographic screens. We do not require a detailed microphysical model; only that $I(r)$ increases monotonically during collapse and is bounded above by the holographic limit.
-
-The holographic bound on information content is given by:
+\section{Information Saturation}
+Let $I(r)$ denote the effective number of independent microscopic degrees of freedom compatible with the macroscopic configuration at radius $r$. This is consistent with coarse-grained entropy, entanglement entropy across local horizons, and Bekenstein--Hawking entropy on holographic screens. We remain agnostic about the underlying microphysics: we require only that $I(r)$ increase monotonically as $r$ decreases, and that it be bounded above by the holographic limit
 \begin{equation}
-I_{\max} = \frac{A}{4\ell_p^2},
+I_{\max}(r) = \frac{A(r)}{4\ell_p^2}, \qquad A(r) = 4\pi r^2 .
 \end{equation}
-where $A = 4\pi r^2$ and $\ell_p$ is the Planck length. The saturation radius $r0$ is defined by the boundary condition:
+The saturation radius $r_0$ is defined by
 \begin{equation}
 I(r_0) = I_{\max}(r_0).
 \end{equation}
-
-As $r$ decreases, composite structure dissolves and bulk degrees of freedom become encoded on the holographic surface. This is an effective dimensional reduction: the number of independent bulk degrees of freedom decreases as correlations become dominated by surface modes. This interpretation is consistent with holographic renormalization and with the emergence of lower-dimensional behavior in several approaches to quantum gravity.
-
-At $r = r_0$, further compression would violate the holographic bound. The configuration becomes unstable, and the stored information undergoes a topological transition (rupture), releasing it into a new expanding spacetime region. This transition is not a classical topology change, which is forbidden in General Relativity, but a semiclassical branch change analogous to transitions between distinct spacetime regions in quantum gravity.
+As $r$ decreases toward $r_0$, composite structure is progressively broken down and encoded on the boundary; the physical content of this process is that the number of independent bulk degrees of freedom is capped by the surface, not that matter passes through any particular sequence of lower-dimensional forms. At $r=r_0$, further compression would violate the bound. The configuration becomes unstable and undergoes a rupture, releasing its information into a new expanding spacetime region. This is not a classical topology change, which general relativity forbids, but a semiclassical branch transition of the kind expected in quantum gravity.
 
 \begin{table}[h]
 \caption{Comparison with selected singularity-resolution frameworks.}
@@ -61,44 +56,55 @@ Entropic Gravity & Partial & Thermodynamic force & Yes \\
 \end{tabular}
 \end{ruledtabular}
 \end{table}
+
 \section{Effective Dynamics and Bounce}
-To capture the saturation effect dynamically, we introduce a minimal modification to the Friedmann equation:
+We model the saturation effect with a minimal modification to the Friedmann equation (natural units, $G=c=1$, so $\rho$ absorbs the usual $8\pi G/3$):
 \begin{equation}
-H^2 = \rho \left( 1 - \frac{\rho}{\rho_{\text{sat}}} \right),
+H^2 = \rho\left(1 - \frac{\rho}{\rho_{\text{sat}}}\right),
 \end{equation}
-where $\rho_{\text{sat}}$ is the saturation density implied by the holographic bound. This form is the lowest-order correction that enforces $H = 0$ at saturation and is consistent with imposing a maximum entropy density in Jacobson’s thermodynamic derivation of Einstein’s equations \cite{Jacobson1995}. The correction is thermodynamic rather than material: no exotic matter or violation of energy conditions is required.
+where $\rho_{\text{sat}}$ is the saturation density implied by the holographic bound. This is the lowest-order correction enforcing $H=0$ at saturation, consistent with imposing a maximum entropy density in Jacobson's thermodynamic derivation of Einstein's equations \cite{Jacobson1995}; the correction is thermodynamic, not material, and requires no violation of energy conditions.
 
-As a heuristic illustration of how a saturation ceiling might arise from an underlying relational substrate, consider a toy Mutual-Information (MI) Laplacian matrix model on pre-geometric quantum states, with canonical partition function $Z = \sum_n e^{-\beta \lambda_n}$. In the limit where the long-range correlation parameter $\alpha \rightarrow 0^+$, the underlying graph tends to the complete graph $K_N$ by construction of the ansatz, giving a degenerate eigenvalue spectrum ($\lambda_n = N$) and a corresponding energy-density ceiling ($\rho_{\text{eff}} = N$). We emphasize that this limit is a definitional feature of the toy ansatz rather than an independently derived physical result, and we do not present it as a first-principles derivation of $\rho_{\text{sat}}$; it is offered only to illustrate, qualitatively, one way a hard information ceiling could emerge from a relational microstructure. An independent, non-tautological derivation of $\rho_{\text{sat}}$ from microphysics remains an open problem for this model.
+As a heuristic illustration of how such a ceiling could arise from an underlying relational substrate, consider a toy mutual-information (MI) Laplacian model with partition function $Z=\sum_n e^{-\beta\lambda_n}$. As the long-range correlation parameter $\alpha\to0^+$, the underlying graph tends to the complete graph $K_N$ by construction, giving a degenerate spectrum ($\lambda_n=N$) and an energy-density ceiling ($\rho_{\text{eff}}=N$). This limit is a definitional feature of the toy ansatz, not an independently derived result, and we do not present it as a first-principles derivation of $\rho_{\text{sat}}$. A non-tautological derivation of $\rho_{\text{sat}}$ from microphysics remains open.
 
-As $\rho \rightarrow \rho_{\text{sat}}$, the Hubble parameter $H \rightarrow 0$, producing a smooth bounce. Near saturation, an effective repulsive contribution arises from the saturation of relational degrees of freedom, analogous to entropic forces \cite{Verlinde2011}. A perturbative stability analysis shows that small deviations around $\rho_{\text{sat}}$ do not lead to runaway behavior: the saturation term acts as an absolute information-theoretic potential barrier, stabilizing the bounce.
+\subsection{Exact bounce solution and tensor spectrum}
+For a radiation-dominated matter sector ($\rho\propto a^{-4}$), the modified Friedmann equation admits an exact closed-form solution,
+\begin{equation}
+a(t) = a_B\left[1+(t/t_\ast)^2\right]^{1/4}, \qquad t_\ast = \frac{1}{2\sqrt{\rho_{\text{sat}}}},
+\end{equation}
+with the same functional form as the standard loop-quantum-cosmology radiation bounce, though motivated here by information saturation rather than holonomy corrections. The conformal-time potential $U(\tau)=a''/a$ is likewise closed-form and smooth everywhere, peaking at the bounce.
+
+We numerically integrated the tensor Mukhanov--Sasaki equation on this background with adiabatic vacuum initial conditions (Wronskian conserved to better than $10^{-7}$) and extracted the Bogoliubov coefficient $\beta_k$. Unlike mechanisms with a finite-width confinement feature, which can produce a scale-free power-law tail in $|\beta_k|^2$, the smooth single-timescale bounce here gives exponentially suppressed particle production,
+\begin{equation}
+|\beta_k|^2 \sim e^{-2\kappa k}, \qquad \kappa\,\mathcal{H}_{\max} \approx 0.76,
+\end{equation}
+where $\mathcal{H}_{\max}$ is the peak comoving Hubble rate at the bounce. The dimensionless product $\kappa\,\mathcal{H}_{\max}$ is constant across the values of $\rho_{\text{sat}}$ tested, confirming a genuine kinematic scaling relation. This result assumes pure radiation domination and should not be conflated with the power-law tensor tilt found in models with an explicit confinement profile.
 
 \section{Relation to Existing Approaches}
-This model is aligned with thermodynamic and holographic approaches to gravity. Its novelty lies in identifying information saturation as the direct physical trigger for the bounce, without requiring exotic matter or full quantization of the metric.
+This model is aligned with thermodynamic and holographic approaches to gravity. Its novelty lies in identifying information saturation, rather than exotic matter or metric quantization, as the direct trigger for the bounce.
 
-Loop quantum gravity replaces the singularity with a quantum bounce driven by holonomy corrections and discrete geometry \cite{Ashtekar2006}. String-theoretic fuzzballs replace the interior with horizon-scale microstructure. Entropic gravity interprets gravity as emergent from entropy gradients \cite{Verlinde2011}. The present model remains semi-classical but imposes a strict holographic information bound as a dynamical cutoff. The bounce equation resembles that of LQC, but the underlying mechanism is entirely different: here it arises from first-principles information saturation on a relational quantum matrix substrate rather than quantum discreteness.
+Loop quantum gravity resolves the singularity via holonomy corrections and discrete geometry \cite{Ashtekar2006}; string-theoretic fuzzballs replace the interior with horizon-scale microstructure; entropic gravity treats gravity as emergent from entropy gradients \cite{Verlinde2011}. The bounce equation derived here takes the same functional form as the LQC bounce under radiation domination, but is motivated by a different physical mechanism: information saturation on a relational substrate rather than quantum discreteness of geometry. We note this mathematical coincidence explicitly rather than treating the two models as independent.
 
 \section{Discussion}
 \subsection{Implications}
-\textbf{Black Hole Interiors:} The interior is not a singularity but a dynamic region undergoing saturation and rupture. The holographic surface at $r_0$ encodes the full information content of the collapsed matter.
+\textbf{Black Hole Interiors:} The interior is a dynamic saturation-and-rupture region rather than a singularity; the surface at $r_0$ encodes the full information content of the collapsed matter.
 
-\textbf{Cosmology:} Our universe may have originated from such a saturation event in a parent spacetime. This provides a natural mechanism for cosmological bounces without exotic matter or fine-tuned scalar fields.
+\textbf{Cosmology:} Our universe may have originated from such a saturation event in a parent spacetime, offering a mechanism for cosmological bounces without exotic matter or fine-tuned scalar fields.
 
-\textbf{Information Paradox:} Information is preserved through the saturation--rupture transition. The holographic encoding at the saturation surface provides a natural bookkeeping mechanism for information flow.
+\textbf{Information Paradox:} Information is preserved through the saturation--rupture transition, with the holographic encoding at $r_0$ providing a natural bookkeeping mechanism.
 
 \subsection{Observational Signatures}
-Potential observational consequences include:
 \begin{itemize}
 \item Gravitational wave echoes from near-horizon structure.
 \item Modifications to late-stage collapse dynamics.
 \item Deviations in Hawking radiation spectra due to saturation effects.
-\item Possible cosmological imprints from a saturation-induced bounce on the primordial tensor spectrum. Quantitatively relating the bounce dynamics of Eq.~(3) to a specific tensor tilt requires a dedicated perturbation-theory calculation that we defer to future work; we do not currently have a derived prediction for $n_T$ within this model.
+\item Exponentially suppressed tensor particle production near the bounce (Sec.~III.A), under the radiation-domination assumption. Whether this yields an observationally distinctive imprint, and how the result generalizes to other matter content, remains open.
 \end{itemize}
 
 \subsection{Limitations and Future Work}
-This paper presents a conceptual and phenomenological model; the modified Friedmann equation, Eq.~(3), is posited on physical grounds rather than derived from a complete microphysical theory, and no numerical implementation of the collapse or rupture dynamics has yet been carried out. Future work will develop a detailed numerical simulation model of the non-linear rupture phase, a genuine microphysical derivation of $\rho_{\text{sat}}$, and explore observational signatures in upcoming gravitational wave and cosmological detector networks.
+This is a conceptual and phenomenological model. Equation (3) is posited on physical grounds rather than derived from a complete microphysical theory. We have computed the tensor spectrum under radiation domination (Sec.~III.A), but the non-linear rupture dynamics have not been simulated, and the tensor calculation has not been extended beyond radiation domination. Future work includes a numerical treatment of the rupture phase, a non-tautological derivation of $\rho_{\text{sat}}$, generalization of the tensor calculation to other matter content, and comparison with gravitational-wave and cosmological observations.
 
 \section{Conclusion}
-We have presented a minimal holographic model in which black hole singularities are resolved by information saturation. Collapse ends at a finite radius where the holographic bound is reached, triggering a topological rupture and the birth of a new expanding spacetime. The framework is conceptually economical, consistent with established principles of holography and thermodynamic gravity, and offers a promising direction for singularity-free physics grounded in information and relational structure.
+We have presented a minimal holographic model in which black hole singularities may be resolved by information saturation: collapse ends at a finite radius where the holographic bound is reached, triggering a rupture and the birth of a new expanding spacetime. The mechanism admits an exact bounce solution under radiation domination and a corresponding, distinctive prediction of exponentially suppressed tensor particle production. The model is offered as a theoretical and phenomenological proposal; its central claims await a non-tautological derivation of $\rho_{\text{sat}}$ and numerical treatment of the rupture dynamics.
 
 \begin{thebibliography}{99}
 \bibitem{Penrose1965} R. Penrose, Phys. Rev. Lett. \textbf{14}, 57 (1965).
