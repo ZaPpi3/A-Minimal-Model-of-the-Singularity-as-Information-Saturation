@@ -7,9 +7,11 @@ This is a theoretical proposal, not a completed derivation. See the Limitations 
 ## 📁 Repository Structure
 
 ```text
-├── main.tex      # LaTeX manuscript source
-├── main.pdf      # Compiled manuscript
-└── LICENSE       # MIT Open-Source License
+├── main.tex                          # LaTeX manuscript source
+├── main.pdf                          # Compiled manuscript
+├── code/tensor_bounce_check.py       # Independent numerical reproduction of the
+│                                      # tensor Mukhanov-Sasaki result (Sec. III.A)
+└── LICENSE                           # MIT Open-Source License
 ```
 
 ## 🧠 Core Idea
@@ -34,7 +36,7 @@ For a radiation-dominated matter sector, this admits an **exact closed-form boun
 
 $$a(t) = a_B\left[1+(t/t_*)^2\right]^{1/4},$$
 
-with the same functional form as the standard loop-quantum-cosmology radiation bounce, though motivated here by information saturation rather than holonomy corrections. We numerically integrate the tensor Mukhanov–Sasaki equation on this background and find **exponentially suppressed tensor particle production**, $|\beta_k|^2 \sim e^{-2\kappa k}$ - a distinct, computed signature that does not rely on any confinement-profile assumption.
+with the same functional form as the standard loop-quantum-cosmology radiation bounce, though motivated here by information saturation rather than holonomy corrections. We numerically integrate the tensor Mukhanov–Sasaki equation on this background and find **exponentially suppressed tensor particle production**, $|\beta_k|^2 \sim e^{-2\kappa k}$ - a distinct, computed signature that does not rely on any confinement-profile assumption. `code/tensor_bounce_check.py` reproduces this from scratch (independent implementation, not the original code): the invariant $\kappa\,\mathcal{H}_{\max}$ holds to 6 significant figures across a 64x range in $\rho_{\text{sat}}$, and the quoted value $\approx0.76$ is representative of well-converged fit windows (the exact decimal is mildly fit-window-dependent - see the script's output and the corresponding caveat added to `main.tex`).
 
 A toy mutual-information (MI) Laplacian model is presented separately as a heuristic illustration of how a saturation ceiling could arise from an underlying relational substrate. This is explicitly **not** a first-principles derivation of $\rho_{\text{sat}}$; a non-tautological derivation from microphysics remains an open problem.
 
@@ -42,7 +44,7 @@ A toy mutual-information (MI) Laplacian model is presented separately as a heuri
 
 **Computed in this manuscript:**
 - Exact bounce solution under radiation domination
-- Tensor-mode spectrum and its exponential-suppression tail
+- Tensor-mode spectrum and its exponential-suppression tail (independently reproduced in `code/tensor_bounce_check.py`)
 
 **Still open:**
 - A non-tautological, first-principles derivation of $\rho_{\text{sat}}$
