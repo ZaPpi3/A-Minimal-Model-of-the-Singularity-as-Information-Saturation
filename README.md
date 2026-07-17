@@ -34,7 +34,7 @@ For a radiation-dominated matter sector, this admits an **exact closed-form boun
 
 $$a(t) = a_B\left[1+(t/t_*)^2\right]^{1/4},$$
 
-with the same functional form as the standard loop-quantum-cosmology radiation bounce, though motivated here by information saturation rather than holonomy corrections. We numerically integrate the tensor Mukhanov–Sasaki equation on this background and find **exponentially suppressed tensor particle production**, $|\beta_k|^2 \sim e^{-2\kappa k}$ — a distinct, computed signature that does not rely on any confinement-profile assumption.
+with the same functional form as the standard loop-quantum-cosmology radiation bounce, though motivated here by information saturation rather than holonomy corrections. We numerically integrate the tensor Mukhanov–Sasaki equation on this background and find **exponentially suppressed tensor particle production**, $|\beta_k|^2 \sim e^{-2\kappa k}$ - a distinct, computed signature that does not rely on any confinement-profile assumption.
 
 A toy mutual-information (MI) Laplacian model is presented separately as a heuristic illustration of how a saturation ceiling could arise from an underlying relational substrate. This is explicitly **not** a first-principles derivation of $\rho_{\text{sat}}$; a non-tautological derivation from microphysics remains an open problem.
 
